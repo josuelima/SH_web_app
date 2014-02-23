@@ -1,0 +1,13 @@
+<html>
+  <head>
+    <title>Implementação Serviços</title>
+  </head>
+  <body>
+  	<h1>Serviços disponíves</h1>
+  	<ul>
+  	  <% @servicos.each do |s| %>
+ 	  <li><a href="/servico/<%= s["tag"] %>"><%= s["nome"] %></a></li>
+ 	  <% end %>
+ 	</ul>
+  </body>
+</html>

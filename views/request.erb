@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <title>Implementação Serviços</title>
+  </head>
+  <body>
+  	<h1><%= @servico.first["nome"] %></h1>
+  	<h2><%= @recurso.first["label"] %></h2>
+
+	<form method="<%= @recurso.first["method"] %>" action="/request/<%= params[:tag] %>/<%= params[:recurso] %>">
+
+	  <% @recurso.first["parametros"].each do |p| %>
+
+	  	<b><%= p["parametro"].capitalize %></b>
+	  	<br />
+	  	<input type="text" name="<%= p["parametro"] %>" />
+	  	<br />
+	  	<br />
+
+	  <% end %>
+
+      <input type="submit" />
+
+	</form>
+
+  </body>
+</html>

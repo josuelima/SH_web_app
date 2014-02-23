@@ -1,0 +1,14 @@
+<html>
+  <head>
+    <title>Implementação Serviços</title>
+  </head>
+  <body>
+  	<h1><%= @servico.first["nome"] %></h1>
+  	<h2><%= @servico.first["descricao"] %></h2>
+  	<ul>
+  	  <% @recursos.each do |r| %>
+ 	  <li><a href="/servico/<%= params[:tag] %>/<%= r["uri_api"] %>"><%= r["label"] %></a></li>
+ 	  <% end %>
+ 	</ul>
+  </body>
+</html>
